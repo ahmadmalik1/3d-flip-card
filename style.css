@@ -1,0 +1,68 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-box{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flip-card{
+    text-align: center;
+    width: 250px;
+    height: 300px;
+    transform-style: preserve-3d;
+    box-shadow: 2px 3px 10px 5px rgb(226, 226, 226);
+    transition: .5s;
+    cursor: pointer;
+}
+.flip-card:hover{
+    transform: rotateY(180deg);
+}
+.front{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 250px;
+    height: 300px;
+}
+.front > span{
+    color: rgb(182, 182, 182);
+    font-size: 13px;
+}
+.front > .links{
+    text-align: center;
+}
+.links > ion-icon{
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+ion-icon:nth-of-type(1){
+    color: red;
+}
+ion-icon:nth-of-type(2){
+    color: green;
+}
+ion-icon:nth-of-type(3){
+    color: blue;
+}
+.back{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    width: 250px;
+    height: 300px;
+    
+}
+.back > h2{
+    color: brown;
+    text-align: left;
+    padding: 5px;
+}
+.back > p{
+    color: rgb(77, 77, 77);
+    text-align: left;
+    padding: 5px;
+}
